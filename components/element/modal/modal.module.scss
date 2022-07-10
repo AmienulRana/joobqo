@@ -44,10 +44,13 @@ $transition-modal: 100ms;
 }
 .modal_body{
     margin-top: 40px;
+    width: 100%;
     @include justify-align-direction(center, center, column);
 }
 .profile{
-    .img{ @include width-height(150px, 150px); border-radius: 50%; background:green}
+    @include justify-align-direction(center, center, column);
+    h2{ margin-bottom: 10px}
+    .img{ @include width-height(120px, 120px); border-radius: 50%; background:green}
     .social_media_profile{
         margin:15px auto;
         @include justify-align(center);
