@@ -1,0 +1,57 @@
+@import '../../../styles/mixin.scss', '../../../styles/variable.scss';
+$transition-modal: 100ms;
+@mixin position-fixed(){
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.modal_background{
+    @include position-fixed();
+    @include justify-align(center, center);
+    transition: $transition-modal;
+}
+.active{
+    z-index: 2;
+    transition: $transition-modal;
+    background: rgba(0, 0, 0, .4);
+}
+.modal{
+    @include width-height(400px, 350px);
+    background: white;
+    border-radius: 10px;
+    transform: translateY(100px);
+    opacity:0;
+    transition: $transition-modal * 3;
+    padding:15px 20px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar{ display: none;}
+}
+.modal_active{
+    opacity:1;
+    transform: translateY(0);
+    transition: $transition-modal * 3;
+}
+.modal_header{
+    position:relative;
+    @include width-height(100%, max-content);
+    svg{
+        @include absolute-top-right(0, 0);
+        font-size:26px;
+        cursor:pointer;
+    }
+}
+.modal_body{
+    margin-top: 40px;
+    @include justify-align-direction(center, center, column);
+}
+.profile{
+    .img{ @include width-height(150px, 150px); border-radius: 50%; background:green}
+    .social_media_profile{
+        margin:15px auto;
+        @include justify-align(center);
+        width:100%;
+        svg{ font-size: 30px; margin:0 10px; color: $main-color; cursor:pointer;}
+    }
+}

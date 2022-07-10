@@ -1,0 +1,23 @@
+@import './variable.scss', './mixin.scss';
+
+.home{
+    padding:20px $padding-content;
+    .wrapperBanner{
+        @include justify-align(null, center);
+    }
+    .tutorial{
+        margin-top: $margin-top-content;
+        .profile{
+            @include justify-align-direction(space-between, center);
+            @include absolute-top-left(30px, 0);
+            height: 160px;
+            padding: 20px 10px;
+            border-radius: 10px;
+            z-index: 1;
+            background-color: white;
+            box-shadow: $box-shadow;
+            p{ color:$text-disabled;}
+        }
+    }
+   
+}

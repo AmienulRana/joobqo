@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Gantari&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Gantari',sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul li{
+  list-style:none;
+}
+.active{
+  font-weight:bold;
+  color:black;
+}
+input{
+  outline:none;
+}
+.relative{
+  position: relative;
+}

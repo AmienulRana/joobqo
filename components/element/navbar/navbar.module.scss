@@ -1,0 +1,21 @@
+@import '../../../styles/variable.scss', '../../../styles/mixin.scss';
+.Navbar{
+    padding: 10px $padding-content;
+    @include justify-align(space-between, center);
+    .Brand{
+        font-size: 24px;
+        margin:0;
+        span{
+            color:$main-color;
+        }
+    }
+    ul{
+        @include justify-align(space-between, null);
+        li{ margin-right: 25px;}
+    }
+    .Authentication{
+        @include justify-align(null, center);
+        p{ margin-right:25px}
+        button{ width:90px; background:$background-linear;}
+    }
+}

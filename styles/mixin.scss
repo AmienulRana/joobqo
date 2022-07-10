@@ -1,0 +1,33 @@
+@mixin justify-align($justify, $align: $justify){
+    display:flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin absolute-top-left($top, $left){
+    position:absolute;
+    top:$top;
+    left:$left;
+}
+@mixin absolute-top-right($top, $right){
+    position:absolute;
+    top:$top;
+    right:$right;
+}
+@mixin absolute-bottom-right($bottom, $right){
+    position:absolute;
+    bottom:$bottom;
+    right:$right;
+}
+@mixin width-height($width, $height){
+    width:$width;
+    height:$height;
+}
+@mixin background-color($background, $color){
+    background:$background;
+    color:$color;
+}
+@mixin justify-align-direction($justify, $align: $justify, $direction: column ){
+    @include justify-align($justify, $align);
+    flex-direction: column;
+}
