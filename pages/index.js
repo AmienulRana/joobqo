@@ -26,7 +26,9 @@ export default function Home() {
                 <Image src={profile} />
                 <h4>Amienul Rana</h4>
                 <p>FE Dev</p>
-                <Button onClick={() => setShowModal(true)} text="Hire me" width="100%" background="gradient" />
+                <Button onClick={() => setShowModal(true)} width="100%" background="gradient">
+                  Hire Me
+                </Button>
               </section>
               <Modal showModal={showModal} setShowModal={setShowModal} />
               <Image src={ImgSuccess} width={360} height={430} />
