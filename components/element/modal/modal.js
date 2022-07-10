@@ -25,12 +25,13 @@ export default function Modal({ showModal, setShowModal }){
                 </section>
                 <section className={styles.modal_body}>
                     <div className={styles.profile}>
+                        <h2>Hire Me!</h2>
                         <div className={styles.img}></div>
                         <div className={styles.social_media_profile}>
                             <a href="https://wa.me/085260298204" target="_blank">
                                 <BsWhatsapp />
                             </a>
-                            <a href="/">
+                            <a href="https://www.linkedin.com/in/amienul-rana-704681218/">
                                 <BsLinkedin />
                             </a>
                             <a href="https://github.com/AmienulRana" target="_blank">
@@ -38,7 +39,7 @@ export default function Modal({ showModal, setShowModal }){
                             </a>
                         </div>
                     </div>
-                    <Button text="" background="gradient" width="80%">
+                    <Button background="gradient" width="80%">
                         <a href="../../../cv_amienul_rana.pdf" attributes-list download>Download CV</a>
                     </Button>
                 </section>
