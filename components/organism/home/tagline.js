@@ -18,7 +18,9 @@ function Tagline() {
                 <input type="text" placeholder="location"/>
                 <GoLocation />
             </div>
-            <Button text="search"/>
+            <Button background="gradient">
+                Search
+            </Button>
             </div>
         </section>
    )
