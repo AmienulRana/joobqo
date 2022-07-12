@@ -1,14 +1,4 @@
-@import '../../../styles/mixin.scss', '../../../styles/variable.scss';
-.button{
-    outline:0;
-    border:0;
-    height: 30px;
-    @include justify-align(center);
-    border-radius: 5px;
-    color:white;
-    font-weight:bold;
-    cursor: pointer;
-}
+@import '../../../styles/variable.scss';
 .gradient{
     background: $background-linear;
 }
