@@ -15,15 +15,15 @@ export default function Home() {
   const [showModal, setShowModal] = useState(false);
   return (
       <Layout title="Home">
-        <section className={styles.home}>
-          <section className={styles.wrapperBanner}>
+        <section className="py-5 px-16">
+          <section className="flex items-center">
             <Tagline styles={styles} />
             <BannerImg styles={styles} />
           </section>
           <section className={styles.tutorial}>
             <div className='relative'>
               <section className={styles.profile}>
-                <Image src={profile} />
+                <Image src={profile} alt="my profile"/>
                 <h4>Amienul Rana</h4>
                 <p>FE Dev</p>
                 <Button onClick={() => setShowModal(true)} width="100%" background="gradient">
@@ -31,7 +31,7 @@ export default function Home() {
                 </Button>
               </section>
               <Modal showModal={showModal} setShowModal={setShowModal} />
-              <Image src={ImgSuccess} width={360} height={430} />
+              <Image src={ImgSuccess} width={360} height={430} alt="profile work success"/>
             </div>
           </section>
         </section>

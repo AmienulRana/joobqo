@@ -28,13 +28,13 @@ export default function Modal({ showModal, setShowModal }){
                         <h2>Hire Me!</h2>
                         <div className={styles.img}></div>
                         <div className={styles.social_media_profile}>
-                            <a href="https://wa.me/085260298204" target="_blank">
+                            <a href="https://wa.me/085260298204" target="_blank" rel="noreferrer">
                                 <BsWhatsapp />
                             </a>
-                            <a href="https://www.linkedin.com/in/amienul-rana-704681218/">
+                            <a href="https://www.linkedin.com/in/amienul-rana-704681218/" rel="noreferrer">
                                 <BsLinkedin />
                             </a>
-                            <a href="https://github.com/AmienulRana" target="_blank">
+                            <a href="https://github.com/AmienulRana" target="_blank" rel="noreferrer">
                                 <BsGithub />
                             </a>
                         </div>

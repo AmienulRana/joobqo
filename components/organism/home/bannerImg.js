@@ -7,14 +7,14 @@ import styles from './styles/bannerImg.module.scss';
 export default function BannerImg() {
   return (
     <section className={styles.bannerImg}>
-      <Image src={bannerImg} />
+      <Image src={bannerImg} alt="image banner" />
       <div className={styles.jobVacancy}>
         <MdWork />
         <h4>5,6k</h4>
         <p>Job vacancy</p>
       </div>
       <div className={styles.jobHiring}>
-        <Image src={MsLogo} />
+        <Image src={MsLogo} alt="microsoft logo" />
         <div>
           <h4>Software Engineering</h4>
           <p>1 Day ago</p>
