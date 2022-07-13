@@ -6,7 +6,7 @@ export default function HowToApply(){
             <ul className="mt-5 lg:pl-4">
             <li className="list-disc mb-4">
                 <h1 className="text-xl font-bold">Upload You CV and portofilo</h1>
-                <p className="text-disabled">You can upload your Resume, CV, and protofolio directly to JobQoo</p>
+                <p className="text-disabled">You can upload your Resume, CV, and portfolio directly to JobQoo</p>
             </li>
             <li className="list-disc mb-4">
                 <h1 className="text-xl font-bold">You will notified with all the update</h1>
