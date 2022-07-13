@@ -1,15 +1,11 @@
 import BannerImg from '../components/organism/home/bannerImg';
+import { BsCheckCircleFill } from '../components/Icons';
 import Layout from '../components/layout/layout';
-import styles from '../styles/Home.module.scss';
 import Tagline from '../components/organism/home/tagline';
 import { useState } from 'react';
-import ImgSuccess from '../public/image/imgSucces.png';
-import profile from '../public/image/profile.png';
-import Image from 'next/image';
-import Button from '../components/element/button/button';
 import Modal from '../components/element/modal/modal';
-
-
+import HowToApply from '../components/organism/home/howToApply';
+import SuccessHired from '../components/organism/home/successHired';
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -17,24 +13,15 @@ export default function Home() {
       <Layout title="Home">
         <section className="py-5 px-16">
           <section className="flex items-center">
-            <Tagline styles={styles} />
-            <BannerImg styles={styles} />
+            <Tagline  />
+            <BannerImg  />
           </section>
-          <section className={styles.tutorial}>
-            <div className='relative'>
-              <section className={styles.profile}>
-                <Image src={profile} alt="my profile"/>
-                <h4>Amienul Rana</h4>
-                <p>FE Dev</p>
-                <Button onClick={() => setShowModal(true)} width="100%" background="gradient">
-                  Hire Me
-                </Button>
-              </section>
-              <Modal showModal={showModal} setShowModal={setShowModal} />
-              <Image src={ImgSuccess} width={360} height={430} alt="profile work success"/>
-            </div>
+          <section className="mt-70px flex items-center">
+            <SuccessHired setShowModal={setShowModal}/>
+            <HowToApply />
           </section>
         </section>
+      <Modal showModal={showModal} setShowModal={setShowModal} />
       </Layout>
   )
 }
