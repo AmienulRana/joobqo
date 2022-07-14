@@ -11,6 +11,7 @@ $transition-modal: 100ms;
     @include position-fixed();
     @include justify-align(center, center);
     transition: $transition-modal;
+    z-index:-1;
 }
 .active{
     z-index: 2;
