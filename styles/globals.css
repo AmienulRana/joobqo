@@ -26,3 +26,6 @@ input{
 .relative{
   position: relative;
 }
+.bg-gradient{
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(166,198,255,1) 0%, rgba(117,162,250,1) 100%);
+}
