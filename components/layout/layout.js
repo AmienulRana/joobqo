@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Navbar from '../element/navbar/navbar';
+import Footer from '../element/footer/footer';
+import PropTypes from 'prop-types';
 export default function Layout({ children, title }){
     return(
         <div>
@@ -11,9 +13,15 @@ export default function Layout({ children, title }){
             <header>
                 <Navbar />
             </header>
-            <main>
+            <main className="py-5 px-16">
                 { children }
             </main>
+            <Footer />
         </div>
     )
+}
+
+Layout.propType = {
+    children:PropTypes.node,
+    title:PropTypes.title
 }
