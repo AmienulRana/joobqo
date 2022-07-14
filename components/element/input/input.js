@@ -11,13 +11,16 @@ export function InputIcon(props){
     </div>)
 }
 export default function Input(props){
-    const { Icon } = props;
+    const { type, placeholder } = props;
     return(
         <div className={styles.wrapperInput}>
-            <input />
-            <Icon />
+            <input type={type} placeholder={placeholder} />
         </div>
     )
+}
+Input.propType = {
+    type: PropTypes.string,
+    placeholder: PropTypes.string
 }
 
 InputIcon.propType = {
