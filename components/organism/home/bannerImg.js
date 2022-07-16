@@ -5,8 +5,8 @@ import bannerImg from '../../../public/image/bannerImg.png';
 import { MdWork } from '../../Icons';
 export default function BannerImg() {
   return (
-    <section className="relative">
-      <Image src={bannerImg} alt="image banner" />
+    <section className="relative lg:block hidden">
+      <Image src={bannerImg} alt="image banner"/>
       <div className="flex justify-center items-center absolute top-8 left-0 flex-col rounded bg-white shadow w-100 h-110">
         <MdWork className="w-10 h-10 text-white bg-orange p-2 rounded-half" />
         <h4 className="font-bold mt-2">5,6k</h4>

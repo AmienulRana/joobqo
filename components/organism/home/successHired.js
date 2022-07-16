@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Button from '../../element/button/button';
 export default function SuccessHired({ setShowModal }){
     return(
-    <div className="relative">
+    <div className="relative hidden md:block">
         <section className="flex justify-between items-center flex-col h-40 py-5 px-2.5 rounded-lg z-10 bg-white absolute left-0 top-7 shadow">
             <Image src={profile} alt="my profile"/>
             <h4>Amienul Rana</h4>
