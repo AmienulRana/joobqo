@@ -1,0 +1,36 @@
+@import './mixin.scss', './variable.scss';
+.banner{
+    @include justify-align(null, center);
+    padding:0 $padding-content;
+}
+.tutorial{
+    padding: 0 $padding-content;
+    @include justify-align(null, center);
+    margin-top: $margin-top-content;
+}
+// "py-4 md:h-52 bg-gradient"
+.subscribe{
+    background:$background-linear;
+    padding:40px 0;
+    border-radius:10px;
+    width:80%;
+    @include justify-align-direction(center);
+    margin: $margin-top-content auto 0;
+    h1{
+        color:white;
+        margin-bottom:10px;
+        width: 70%;
+        text-align: center;
+    }
+}
+
+@media (max-width:768px){
+    .banner, .tutorial, .subscribe{
+        padding: 0 20px;
+    }
+    .subscribe{
+        width:90%;
+        padding:15px 10px;
+        h1{ width:100% }
+    }
+}

@@ -1,0 +1,21 @@
+@import '../../../../styles/mixin.scss', '../../../../styles/variable.scss';
+// "relative hidden md:block"
+.success{
+    position: relative;
+    .success__hire{
+        @include justify-align-direction(space-between, center);
+        @include absolute-top-left(22px, 0);
+        z-index:2;
+        height:160px;
+        box-shadow: $box-shadow;
+        background:white;
+        padding:20px 10px;
+        border-radius:10px;
+    }
+}
+
+@media (max-width:768px){
+    .success{
+        display:none;
+    }
+}

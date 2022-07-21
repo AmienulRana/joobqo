@@ -1,0 +1,14 @@
+// "h-full text-base pl-9"
+@import '../../../styles/mixin.scss', '../../../styles/variable.scss';
+.input{
+    padding: 10px 10px 10px 38px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+}
+.icon{
+    @include absolute-top-left(50%, 4px);
+    font-size: 18px;
+    color:$main-color;
+    transform: translateY(-50%);
+}

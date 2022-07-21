@@ -1,0 +1,19 @@
+@import '../../../../styles/variable.scss';
+.howToApply{
+    margin-left: 50px;
+    width:50%;
+    p:first-child{ color:$main-color; }
+    p:not(:first-child){ color: $text-disabled; }
+    ul{
+        margin-top: 10px;
+        padding-left: 15px;
+        li{ margin-top:20px; }
+    }
+}
+
+@media (max-width: 768px){
+    .howToApply{
+        width:100%;
+        margin-left: 0;
+    }
+}

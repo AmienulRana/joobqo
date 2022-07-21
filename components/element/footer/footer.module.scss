@@ -1,0 +1,20 @@
+// "py-5 lg:px-16 px-4 mt-70px flex justify-between flex-wrap"
+@import '../../../styles/mixin.scss', '../../../styles/variable.scss';
+.footer{
+    @include justify-align(space-between, null);
+    flex-wrap: wrap;
+    margin-top:$margin-top-content;
+    padding:10px $padding-content;
+    section{
+        width:20%;
+        margin-top: 15px;
+    }
+    p{color: $text-disabled; margin-top:10px;}
+}
+
+@media (max-width:768px) {
+    .footer{
+        padding:10px 20px;
+        section{ width: 48%; }
+    }
+}

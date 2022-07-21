@@ -1,0 +1,41 @@
+@import '../../../../styles/mixin.scss',  '../../../../styles/variable.scss';
+.category{
+    padding:0 $padding-content;
+    h2{ margin-bottom: 15px}
+    p a{ text-decoration: underline; color:$main-color; cursor: pointer;}
+}
+.category__cardsCategory{
+    @include justify-align(space-between, center);
+    flex-wrap: wrap;
+    .category__cardCategory{
+        @include justify-align-direction(center, center);
+        box-shadow: $box-shadow;
+        width: 25%;
+        margin-bottom: 10px;
+        padding: 10px 0;
+        border-radius: 10px;
+        .category__icon{
+            @include justify-align(center);
+            width: max-content;
+            background-color: $main-color;
+            border-radius:50%;
+            padding:8px;
+            @include width-height(50px,50px);
+            svg{ color: white; font-size: 28px;}
+        }
+        h3{ margin-top: 10px;}
+        p{ color: $text-disabled; margin: 5px 0;}
+    }
+}
+@media (max-width:768px){
+    .category{
+        padding:0 20px;
+        .category__cardsCategory{
+            justify-content: center;
+            .category__cardCategory{
+                width:90% !important;
+                margin-bottom:20px;
+            }
+        }
+    }
+}

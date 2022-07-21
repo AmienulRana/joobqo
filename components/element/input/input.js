@@ -1,20 +1,18 @@
 import PropTypes from 'prop-types';
-
+import  styles from './input.module.scss';
 export default function Input(props){
-    const { classNameProps} = props;
+    const { classNameProps, type = "text" } = props;
     return(
-            <input className={classNameProps} {...props} />
+        <input type={type} className={[styles.input, classNameProps].join(' ')} {...props} />
     )
 }
 
 export function InputIcon(props){
-    const { Icon, type, onChange, placeholder, classNameProps, classNameIcon } = props;
-    const classNameInput = ["h-full border-0 text-base pl-9", classNameProps].join(' ');
-    const classIcon = ["absolute top-1/2 left-2 text-main-color font-xl -translate-y-1/2", classNameIcon].join(' ');
+    const { Icon, onChange, placeholder, classNameProps = '', classNameIcon = '', classNameContainer = '' } = props;
     return(
-    <div className="relative">
-       <Input type={type} placeholder={placeholder} classNameProps={classNameInput} />
-       <Icon className={classIcon} />
+    <div className={["relative", classNameContainer].join(' ')}>
+       <Input placeholder={placeholder} classNameProps={classNameProps} onChange={onChange} />
+       <Icon className={[styles.icon, classNameIcon].join(' ')} />
     </div>)
 }
 

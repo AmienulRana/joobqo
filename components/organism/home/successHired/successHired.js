@@ -1,11 +1,12 @@
-import ImgSuccess from '../../../public/image/imgSucces.png';
-import profile from '../../../public/image/profile.png';
+import ImgSuccess from '../../../../public/image/imgSucces.png';
+import profile from '../../../../public/image/profile.png';
 import Image from 'next/image';
-import Button from '../../element/button/button';
+import Button from '../../../element/button/button';
+import styles from './successHire.module.scss';
 export default function SuccessHired({ setShowModal }){
     return(
-    <div className="relative hidden md:block">
-        <section className="flex justify-between items-center flex-col h-40 py-5 px-2.5 rounded-lg z-10 bg-white absolute left-0 top-7 shadow">
+    <div className={styles.success}>
+        <section className={styles.success__hire}>
             <Image src={profile} alt="my profile"/>
             <h4>Amienul Rana</h4>
             <p className="text-disabled">FE Dev</p>
