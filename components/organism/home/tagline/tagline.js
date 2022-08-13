@@ -11,7 +11,7 @@ function Tagline() {
             <div className={styles.searchJob}>
                 <InputIcon placeholder="job title" Icon={FiSearch} />
                 <InputIcon placeholder="location" Icon={GoLocation} />
-                <Button background="gradient" classNameProps={styles.button}>Search</Button>
+                <Button background="gradient">Search</Button>
             </div>
         </section>
    )
