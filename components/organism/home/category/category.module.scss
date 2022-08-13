@@ -25,6 +25,10 @@
         }
         h3{ margin-top: 10px;}
         p{ color: $text-disabled; margin: 5px 0;}
+        button{
+            width: 40%;
+            margin-top:10px;
+        }
     }
 }
 @media (max-width:768px){
