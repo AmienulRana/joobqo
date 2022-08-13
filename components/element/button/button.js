@@ -1,14 +1,13 @@
 import styles from './button.module.scss';
 import PropTypes from 'prop-types';
-export default function Button({ children, classNameProps, width, background, onClick }){
-    const newClass = [styles.button, styles[background], classNameProps].join(' ');
-    
-    return <button onClick={onClick} className={newClass} style={{ width }}>{children}</button>
+export default function Button({ children, className, width, background, onClick }){
+    const newClass = [styles.button, styles[background], className].join(' ');
+    return <button onClick={onClick} className={newClass}>{children}</button>
 }
 
 Button.propType = {
     background:PropTypes.string,
-    classNameProps:PropTypes.string,
+    className:PropTypes.string,
     children:PropTypes.node,
     onClick:PropTypes.func,
     text:PropTypes.string,
