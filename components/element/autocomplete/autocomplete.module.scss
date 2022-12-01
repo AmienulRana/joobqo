@@ -1,0 +1,25 @@
+@import '../../../styles/variable.scss', '../../../styles/mixin.scss';
+
+.autocomplete{
+    position: relative;
+    .__data{
+        @include absolute-top-left(90%, 0);
+        @include width-height(100%, max-content);
+        background: white;
+        box-shadow: $box-shadow;
+        border-radius: 5px;
+        button{
+            padding: 7px 15px;
+            width: 100%;
+            text-align: start;
+            background: transparent;
+            border:0;
+            font-size: 19px;
+            margin-bottom: 15px;
+            &:hover{
+                background: $main-color;
+            }
+        }
+        
+    }
+}

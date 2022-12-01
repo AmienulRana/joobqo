@@ -1,0 +1,30 @@
+@import './mixin.scss', './variable.scss';
+.myprofile{
+    margin-top: $margin-top-content;
+    padding: 0 $padding-content;
+    h1{ 
+        @include justify-align(space-between, center); 
+        font-size:$font-size; 
+        svg { color: $text-disabled;}
+    } 
+    .myprofile__header{display: flex;}
+    .header__information{margin-left: 30px;}
+    .information__role{ font-size: 19px; margin: 5px 0; }
+    .information__sosmed { 
+        margin-top: 20px; 
+        svg{
+            font-size: 28px;
+            color: $text-disabled;
+            &:not(:first-child){
+                margin-left: 20px;
+            }
+        }
+    }
+}
+.mycv{
+    margin-top:$margin-top-content;
+    p{ color: $text-disabled; }
+}
+.experiences__add, .skills__add, .mycv__add{
+    @include justify-align(space-between, items-center);
+}

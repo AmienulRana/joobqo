@@ -1,0 +1,32 @@
+@import '../../../../styles/variable.scss';
+.modal{ 
+    width: 70%;
+    height: 470px;
+}
+.form__profile{
+    width: 100%;
+    label{
+        font-size:18px;
+    }
+    input{
+        border: 1px solid $text-disabled;
+        padding-left: 10px;
+        width: 100%;
+        margin: 10px auto 20px;
+        border-radius: 6px;
+        &:focus{
+            border:2px solid $main-color;
+        }
+    }
+    h1{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .form__action{
+        display: flex;
+        justify-content: space-between;
+        button{
+            width: 45%;
+        }
+    }
+}

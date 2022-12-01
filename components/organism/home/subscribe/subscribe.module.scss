@@ -2,10 +2,11 @@
 .subscribe__form{
     width:70%;
     position: relative;
+    margin-top:20px;
     input{
         width:100%;
-        padding-left: 15px;
         border-radius:5px;
+        padding:20px 15px;
     }
     button{
         @include absolute-top-right(50%, 8px);

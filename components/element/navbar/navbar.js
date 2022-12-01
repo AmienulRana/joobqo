@@ -3,17 +3,12 @@ import { useEffect, useState, useRef } from 'react';
 import Button from '../button/button';
 import Logo from '../logo/logo';
 import styles from'./navbar.module.scss';
+import { FaUserCircle, IoNotifications } from '../../Icons';
 export default function Navbar(){
     const navbarRef = useRef();
-    const [isMobile, setMobile] = useState(false);
     const [showNavbar, setShowNavbar] = useState(false);
+    const [isLogin, setIsLogin] = useState(true);
     useEffect(() => {
-        if(window.outerWidth < 768){
-            setMobile(true);   
-        }
-        window.addEventListener('resize', (e) => {
-            e.target.outerWidth < 768 ? setMobile(true) : setMobile(false)
-        })
         window.addEventListener('click', (e) => {
             if(e.target !== navbarRef.current){
                 setShowNavbar(false);
@@ -27,12 +22,19 @@ export default function Navbar(){
                 <li className="active"><Link href="/">Home</Link></li>
                 <li><Link href="/jobs">Jobs</Link></li>
                 <li><Link href="/">Company</Link></li>
-                <li className={styles.navbar__content__login}><Link href="/">Login</Link></li>
+                <li className={styles.navbar__content__login}><Link href="/login">Login</Link></li>
             </ul>
-            <div className={styles.navbar__authentication}>
-                <p className="mr-10 hidden md:block"><Link href="/">Login</Link></p>
-                <Button background="gradient" width="90px">Sign up</Button>
-            </div>
+            {isLogin ? 
+                <div className={styles.navbar__authentication}>
+                    <IoNotifications />
+                    <Link href="/profile"><FaUserCircle className={styles.navbar__authentication_profile}/></Link>
+                </div>
+                : 
+                <div className={styles.navbar__authentication}>
+                    <p><Link href="/login">Login</Link></p>
+                    <Button background="gradient" width="90px">Sign up</Button>
+                </div>
+            }
         </nav>
     )
 }

@@ -1,0 +1,52 @@
+@import '../../../../styles/mixin.scss', '../../../../styles/variable.scss';
+.experiences{
+    margin-top:$margin-top-content;
+    .experiences__add{
+        @include justify-align(space-between, items-center);
+    }
+    .experience{
+        margin-left: 15px;
+        display: flex;
+        padding:0px 0 30px 25px;
+        border-left:4px solid $main-color;
+        position:relative;
+        .timeline{
+            @include width-height(20px,20px);
+            border-radius:50%;
+            background:$main-color;
+            @include absolute-top-left(-10px,-12px);
+        }
+        h1{ font-size:$font-size - 6; span{ font-size:$font-size / 2; color:$text-disabled} }
+        p{ color:$text-disabled; font-size: $font-size - 8; margin-top:5px; }
+    }
+    .detail{
+        ul{ padding-left: 25px; margin-top:10px; color: $text-disabled }
+    }
+}
+
+.modal{
+    @include width-height(50%, 470px);
+    .modal__content{
+        width: 100%;
+        input, select{
+            border:1px solid $text-disabled;
+            width: 100%;
+            padding-left:20px;
+            &:focus{
+                border-color: $main-color;
+            }
+        }
+        label{
+            display:block;
+            margin:20px auto 10px;
+        }
+        select{ width: 100%; padding:10px;}
+        .modal__start_date, .modal__end_date{
+            display:flex;
+            margin-bottom:20px;
+            justify-content: space-between;
+            // width:100%;
+            div{ width: 48%;}
+        }
+    }
+}

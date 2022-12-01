@@ -1,0 +1,55 @@
+@import './mixin.scss', './variable.scss';
+.login{
+    background: white;
+    box-shadow: $box-shadow;
+    margin:100px auto;
+    padding:10px 30px;
+    border-radius:10px;
+    h1{ font-size: 24px; }
+    p{ color: $text-disabled; margin-top: 5px; }
+    form{
+        margin: 0px auto 10px;
+        input{ @include input-style(); }
+    }
+    a{ text-decoration: underline; color:$main-color;}
+    button{ 
+        width: 100%;
+        margin:20px 0;
+        padding: 15px 0;
+        height: 40px;
+        border: 1px solid $main-color;
+        @include background-color(transparent, $main-color);
+        &:hover{
+            @include background-color($main-color, white);
+        }
+    }
+    .login__password{
+        position:relative;
+        svg{ @include absolute-top-right(70%, 15px);
+            transform:translateY(-60%);
+            font-size:24px;
+            color:$text-disabled;
+            cursor: pointer;
+        }
+    }
+    .login__option{
+        margin-top:20px;
+        p{ text-align: center;}
+    }
+    .login__option_auth{
+        @include justify-align(center);
+        margin-bottom:10px;
+        button{
+            width: max-content;
+            margin-right: 10px;
+            padding:10px !important;
+            svg{ margin-right: 10px; font-size:22px;}
+            
+        }
+    }
+}
+@media( min-width:992px){
+    .login{
+        width:500px;
+    }
+}

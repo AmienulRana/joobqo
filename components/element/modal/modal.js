@@ -2,10 +2,8 @@ import React, { useRef, useEffect } from  'react';
 import styles from './modal.module.scss';
 import { IoClose } from '../../Icons';
 import PropTypes from 'prop-types';
-import Button from '../button/button';
-import { BsWhatsapp, BsLinkedin, BsGithub} from '../../Icons';
-import Link from 'next/link';
-export default function Modal({ showModal, setShowModal }){
+
+export default function Modal({ showModal, setShowModal, children, className}){
     const modalRef = useRef();
 
     useEffect(() => {
@@ -16,42 +14,27 @@ export default function Modal({ showModal, setShowModal }){
         })
     }, []);
 
-    const classModal = [showModal && styles.active, styles.modal_background].join(' ');
+    const classBgModal = [showModal && styles.active, styles.modal_background].join(' ');
+    const classModal = [showModal && styles.modal_active, styles.modal, className].join(' ');
     return (
-        <section className={classModal} ref={modalRef}>
-            <div className={[showModal && styles.modal_active, styles.modal].join(' ')}>
+        <section className={classBgModal} ref={modalRef}>
+            <div className={classModal}>
                 <section className={styles.modal_header}>
                     <IoClose onClick={() =>  setShowModal(false)}/>
                 </section>
                 <section className={styles.modal_body}>
-                    <div className={styles.profile}>
-                        <h2>Hire Me!</h2>
-                        <div className={styles.img}></div>
-                        <div className={styles.social_media_profile}>
-                            <a href="https://wa.me/085260298204" target="_blank" rel="noreferrer">
-                                <BsWhatsapp />
-                            </a>
-                            <a href="https://www.linkedin.com/in/amienul-rana-704681218/" rel="noreferrer">
-                                <BsLinkedin />
-                            </a>
-                            <a href="https://github.com/AmienulRana" target="_blank" rel="noreferrer">
-                                <BsGithub />
-                            </a>
-                        </div>
-                    </div>
-                    <Button background="gradient" width="80%">
-                        <a href="../../../cv_amienul_rana.pdf" attributes-list download>Download CV</a>
-                    </Button>
+                    { children }
                 </section>
                 <section className={styles.modal_footer}>
 
                 </section>
             </div>
-        </section>)
-    
+        </section>
+    )
 }
 
 Modal.propType = {
+    children:PropTypes.node,
     showModal: PropTypes.bool,
     setShowModal:PropTypes.func,
 }

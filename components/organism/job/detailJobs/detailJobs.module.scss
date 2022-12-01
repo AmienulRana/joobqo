@@ -1,0 +1,50 @@
+@import '../../../../styles/mixin.scss',  '../../../../styles/variable.scss';
+.wrapperJobs__detailJobs{
+    width:70%;
+    padding: 18px;
+    overflow-y: scroll;
+    height:600px;
+    .wrapperJobs__detailJobs_header{ display: none;}
+    .wrapperJobs__detailJobs__apply{
+        display:flex;
+        flex-wrap: wrap;
+        margin-top:20px;
+        button{ margin-right:15px; svg{ margin-right: 10px; }}
+    }
+    .salary{ font-weight: bold; color: black !important;}
+    section{ margin-top: 25px; }
+    ul{ margin-left: 24px; li{ margin-top: 10px} }
+    h4{ margin-bottom: 10px;}
+    p{ margin-top: 5px; }
+    article{ text-align: justify;}
+}
+@media (max-width:768px){
+    .wrapperJobs__detailJobs{
+        padding:80px 16px 10px;
+        position: fixed !important;
+        background-color: white;
+        @include absolute-top-left(100%, 0px);
+        @include width-height(100%, 100vh);
+        transition: 300ms;
+        .wrapperJobs__detailJobs_header{
+            @include absolute-top-left(0, 0);
+            @include width-height(100%, max-content);
+            @include justify-align(null, center);
+            box-shadow: $box-shadow;
+            margin-bottom: 30px;
+            padding: 10px 0;
+            svg{ font-size: 30px; color: $text-disabled}
+            p{ font-weight: bold; margin: 0 auto; color: $main-color; font-size: 20px;}
+        }
+        button{ width: 48%; margin-right: 2% !important;}
+        button:last-child{
+            width: 100%;
+            margin-top: 10px;
+        }
+        img{ @include width-height(39px, 39px)}
+    }
+    .wrapperJobs__detailJobs_active{
+        top: 0;
+        transition: 300ms;
+    }
+}

@@ -1,0 +1,10 @@
+@import '../../../../styles/mixin.scss', '../../../../styles/variable.scss';
+.analytics{
+    margin-top:$margin-top-content;
+    .total{
+        margin-top:15px;
+        h1{ font-size: $font-size - 6;}
+        svg{ font-size:36px; color:$text-disabled; margin-right:15px;}
+        @include justify-align(null, center);
+    }
+}

@@ -1,0 +1,12 @@
+@import '../../../../styles/variable.scss';
+.skills{
+    margin-top: $margin-top-content;
+    .skills__add{ display:flex; justify-content: space-between; align-items: center;}
+    h1{ margin-bottom:15px; }
+    .skills__all{
+        width:80%;
+        display:flex;
+        flex-wrap:wrap;
+        h1{ font-size:$font-size - 6; width:50%; }
+    }
+}

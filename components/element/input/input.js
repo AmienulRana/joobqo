@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import  styles from './input.module.scss';
 export default function Input(props){
-    const { classNameProps, type = "text" } = props;
+    const { className, type = "text" } = props;
     return(
-        <input type={type} className={[styles.input, classNameProps].join(' ')} {...props} />
+        <input type={type} className={[styles.input, className].join(' ')} {...props} />
     )
 }
 

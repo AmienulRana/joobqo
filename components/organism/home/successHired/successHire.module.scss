@@ -6,11 +6,15 @@
         @include justify-align-direction(space-between, center);
         @include absolute-top-left(22px, 0);
         z-index:2;
-        height:160px;
+        height:auto;
         box-shadow: $box-shadow;
         background:white;
         padding:20px 10px;
         border-radius:10px;
+        button{
+            margin-top: 10px;
+            width: 100px;
+        }
     }
 }
 

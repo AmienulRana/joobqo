@@ -1,14 +1,33 @@
 import { IoClose, MdOutlineArrowDropDown } from '../../Icons';
-export default function Dropdown({ children, title, showDropdown, setShowDropdown = () => {}}){
+import  styles from './dropdown.module.scss';
+import PropTypes from 'prop-types';
+import { useEffect, useRef } from 'react';
+export default function Dropdown({ children, className, title, showDropdown, setShowDropdown = () => {}}){
+    const dropdownRef = useRef();
+
+    useEffect(() => {
+        window.addEventListener('click', (e) => {
+            if(e.target !== dropdownRef.current){
+                setShowDropdown(false);
+            }
+        })
+    }, [])
     return(
-        <div className="relative mr-4">
-            <div className="w-max px-4 border-2 rounded-full cursor-pointer" onClick={() => setShowDropdown(showDropdown ? false : true)}>
-                <p className="text-disabled flex items-center">{ title } <MdOutlineArrowDropDown className="text-3xl" /></p>
-            </div>
-            <div className={["transition-opacity duration-300 absolute top-full left-0 bg-white shadow w-52 rounded-md py-2 px-4 h-max", showDropdown ? 'opacity-100 z-index-10' : 'opacity-0 -z-index'].join(' ')}>
-                <IoClose className="text-2xl text-disabled absolute top-2 right-2 cursor-pointer" onClick={() => setShowDropdown(showDropdown ? false : true)}/>
+        <div className={[styles.dropdown, className].join(' ')}>
+            <button className={styles.dropdown__header} ref={dropdownRef} onClick={() => setShowDropdown(!showDropdown)}>
+                { title } <MdOutlineArrowDropDown className={showDropdown ? styles.active : ''} />
+            </button>
+            <div className={[styles.dropdown__body, showDropdown ? styles.dropdown__body_active : ''].join(' ')}>
+                <IoClose onClick={() => setShowDropdown(false)}/>
                 {children}
             </div>
         </div>
     )
+}
+
+Dropdown.propTypes = {
+    children: PropTypes.node,
+    title: PropTypes.string,
+    showDropdown: PropTypes.bool,
+    setShowDropdown:PropTypes.func
 }

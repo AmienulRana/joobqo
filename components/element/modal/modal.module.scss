@@ -19,7 +19,6 @@ $transition-modal: 100ms;
     background: rgba(0, 0, 0, .4);
 }
 .modal{
-    @include width-height(400px, 350px);
     background: white;
     border-radius: 10px;
     transform: translateY(100px);

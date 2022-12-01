@@ -1,0 +1,71 @@
+@import '../styles/mixin.scss', '../styles/variable.scss';
+// "border-bottom flex py-2 lg:px-16 px-4"
+.filteredJobs{
+    border-bottom: 1px solid $text-disabled;
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+    padding:10px $padding-content;
+    .searchJobs{
+        display:flex;
+        flex-wrap: wrap;
+        input{
+            border: 1px solid $text-disabled;
+            border-radius: 5px;
+            padding:5px 5px 5px 30px;
+            &:focus{ border-color: $main-color;}
+        }
+        .searchJobs__wrapperInput{ margin: 0 10px; height:max-content}
+        .searchJobs__location{
+            width:150px;
+        }
+    }
+}
+.wrapperJobs{
+    display:flex;
+    flex-wrap: wrap;
+    padding:0 $padding-content;
+    .wrapperJobs__allJobs{
+        width:30%;
+        background:white;
+        border-right: 2px solid $main-color;
+        padding:12px;
+        overflow-y: scroll;
+        height: 600px;
+    }
+    .wrapperJobs__job{
+        @include justify-align(null, start);
+        border-bottom:1px solid $text-disabled;
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+        h3{ color: $main-color }
+        p{ color: $text-disabled; margin-bottom:5px;}
+    }
+    .salary{ font-weight: bold; color: black !important;}
+    // custom-scrollbar"
+    
+}
+
+@media (max-width: 768px){
+    .filteredJobs{
+        padding: 0 20px;
+        .searchJobs{
+            input{ width: 100%; }
+            .searchJobs__location{
+                width: 100%;
+            }
+            .searchJobs__wrapperInput{
+                margin:10px 0;
+                width: 100%;
+            }
+        }
+    }
+    .wrapperJobs{
+        padding:0px 20px;
+        .wrapperJobs__allJobs{
+            width:100%;
+            padding: 12px 0;
+            border:0;
+        }
+    }
+}       
